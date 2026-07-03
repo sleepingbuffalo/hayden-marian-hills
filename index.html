@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Marian Hills Golf Course &amp; Tin Cup Bar and Grill — Malta, Montana</title>
+<meta name="description" content="9-hole public links golf course and the Tin Cup Bar & Grill, just south of Malta, Montana on US 191. Open 7 days a week, 9am–9pm. Call (406) 654-1250.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0f2616;
+  --fairway:#1c4527;
+  --panel:#173a20;
+  --wheat:#e3b04b;
+  --grass:#7fc98a;
+  --cream:#f7f3e6;
+  --cream-dim:#cfc9b2;
+  --sky:#9cc4e4;
+  color-scheme: dark;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Karla',sans-serif;
+  color:var(--cream);
+  background:var(--deep);
+  line-height:1.55;
+}
+h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.15;}
+.script{font-family:'Kaushan Script',cursive;}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+
+/* ---------- top bar ---------- */
+.topbar{
+  background:#000c05;
+  color:var(--cream);
+  text-align:center;
+  font-size:.82rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:.45rem 1rem;
+}
+.topbar a{color:var(--wheat);text-decoration:none;font-weight:700;}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:62vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:3rem 1.25rem 3.2rem;
+  background:
+    linear-gradient(180deg, rgba(15,38,22,.55) 0%, rgba(15,38,22,.4) 45%, rgba(15,38,22,.92) 100%),
+    url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat,
+    var(--fairway);
+  color:var(--cream);
+}
+.hero .est{
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  font-size:.75rem;
+  color:var(--wheat);
+  margin-bottom:.8rem;
+}
+.hero h1{
+  font-size:clamp(2.1rem,6.5vw,4rem);
+  text-shadow:0 2px 14px rgba(0,0,0,.5);
+}
+.hero .and{
+  display:block;
+  font-family:'Kaushan Script',cursive;
+  font-size:clamp(1.3rem,4vw,2.1rem);
+  color:var(--wheat);
+  margin:.5rem 0 .2rem;
+  text-shadow:0 2px 10px rgba(0,0,0,.45);
+}
+.hero p.sub{
+  max-width:32rem;
+  margin:1rem auto 1.6rem;
+  font-size:1rem;
+  text-shadow:0 1px 8px rgba(0,0,0,.55);
+}
+.btn-row{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;}
+.btn{
+  display:inline-block;
+  padding:.8rem 1.5rem;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.05em;
+  border:2px solid var(--wheat);
+  transition:background .2s,color .2s;
+}
+.btn.solid{background:var(--wheat);color:var(--deep);}
+.btn.solid:hover{background:transparent;color:var(--wheat);}
+.btn.ghost{color:var(--cream);}
+.btn.ghost:hover{background:var(--wheat);color:var(--deep);}
+
+/* ---------- scorecard strip ---------- */
+.scorecard{
+  background:#000c05;
+  border-top:3px solid var(--wheat);
+  border-bottom:3px solid var(--wheat);
+}
+.scorecard .inner{
+  max-width:64rem;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+}
+.scorecard .cell{
+  padding:.85rem .3rem;
+  text-align:center;
+  border-right:1px solid rgba(247,243,230,.15);
+}
+.scorecard .cell:last-child{border-right:none;}
+.scorecard .num{
+  font-family:'Marcellus',serif;
+  font-size:clamp(1.1rem,3.2vw,1.7rem);
+  color:var(--grass);
+}
+.scorecard .lab{
+  font-size:.62rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--cream-dim);
+}
+@media(max-width:640px){
+  .scorecard .inner{grid-template-columns:repeat(3,1fr);}
+  .scorecard .cell:nth-child(3){border-right:none;}
+  .scorecard .cell:nth-child(-n+3){border-bottom:1px solid rgba(247,243,230,.15);}
+}
+
+/* ---------- sections ---------- */
+section{padding:2.8rem 1.25rem;}
+.wrap{max-width:64rem;margin:0 auto;}
+.eyebrow{
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  color:var(--sky);
+  font-weight:700;
+  margin-bottom:.5rem;
+}
+h2{font-size:clamp(1.6rem,4.2vw,2.3rem);margin-bottom:1rem;color:var(--grass);}
+
+/* course section */
+#course{background:var(--panel);}
+.course-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;}
+.course-grid .photo{
+  aspect-ratio:4/3;
+  background:url('https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1000&q=70') center/cover no-repeat,var(--fairway);
+  border:4px solid var(--wheat);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+#course p.blurb{font-size:.98rem;}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.chip{
+  font-size:.8rem;
+  border:1px solid rgba(227,176,75,.5);
+  color:var(--cream);
+  padding:.35rem .75rem;
+  border-radius:999px;
+  white-space:nowrap;
+}
+@media(max-width:760px){
+  .course-grid{grid-template-columns:1fr;gap:1.4rem;}
+  .course-grid .photo{aspect-ratio:16/9;}
+}
+
+/* rates strip */
+.rates{
+  background:var(--fairway);
+  padding:2rem 1.25rem;
+}
+.rates .inner{
+  max-width:64rem;margin:0 auto;
+  display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center;
+}
+.rates h2{margin-bottom:.2rem;font-size:1.4rem;}
+.rates .sub{font-size:.8rem;color:var(--cream-dim);}
+.rate-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;}
+.rate-item{text-align:center;border-left:1px solid rgba(247,243,230,.2);padding:.2rem .4rem;}
+.rate-item:first-child{border-left:none;}
+.rate-item .price{font-family:'Marcellus',serif;font-size:1.35rem;color:var(--wheat);}
+.rate-item .lab{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cream-dim);}
+@media(max-width:760px){
+  .rates .inner{grid-template-columns:1fr;gap:1rem;text-align:center;}
+  .rate-row{grid-template-columns:repeat(2,1fr);gap:.9rem .4rem;}
+  .rate-item:nth-child(3){border-left:none;}
+}
+
+/* photo strip */
+.photostrip{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
+.photostrip div{aspect-ratio:1/1;background-size:cover;background-position:center;background-color:var(--fairway);}
+.ph1{background-image:url('https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&w=700&q=70');}
+.ph2{background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=70');}
+.ph3{background-image:url('https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=700&q=70');}
+
+/* menu */
+.menu{background:var(--deep);padding-bottom:3rem;}
+.menu .eyebrow{color:var(--wheat);}
+.menu h2 .script{color:var(--wheat);font-size:1.1em;}
+.menu-intro{max-width:40rem;margin-bottom:1.6rem;color:var(--cream-dim);font-size:.95rem;}
+.menu details{
+  border:1px solid rgba(227,176,75,.35);
+  margin-bottom:.7rem;
+  background:rgba(0,0,0,.18);
+}
+.menu summary{
+  cursor:pointer;
+  list-style:none;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.95rem 1.1rem;
+  font-family:'Marcellus',serif;
+  font-size:1.15rem;
+  color:var(--wheat);
+}
+.menu summary::-webkit-details-marker{display:none;}
+.menu summary::after{content:"+";font-size:1.4rem;color:var(--grass);transition:transform .2s;}
+.menu details[open] summary::after{content:"–";}
+.menu .body{padding:0 1.1rem 1.1rem;}
+.gnote{font-size:.83rem;color:var(--cream-dim);font-style:italic;margin-bottom:.7rem;}
+.mi{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.32rem 0;
+}
+.mi .n{font-weight:500;font-size:.95rem;}
+.mi .n small{display:block;font-weight:400;font-size:.8rem;color:var(--cream-dim);}
+.mi .p{font-family:'Marcellus',serif;color:var(--wheat);white-space:nowrap;}
+.menu-foot{
+  margin-top:1.4rem;
+  text-align:center;
+  color:var(--cream-dim);
+  font-size:.88rem;
+}
+.menu-foot strong{color:var(--wheat);}
+
+/* visit */
+.visit{
+  background:
+    linear-gradient(rgba(15,38,22,.88), rgba(15,38,22,.88)),
+    url('https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1400&q=60') center/cover no-repeat,
+    var(--panel);
+}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.2rem;}
+.visit-card{
+  background:rgba(0,0,0,.35);
+  border-top:4px solid var(--wheat);
+  padding:1.3rem 1.2rem;
+}
+.visit-card h3{color:var(--grass);margin-bottom:.5rem;font-size:1.1rem;}
+.visit-card p{margin-bottom:.45rem;font-size:.95rem;}
+.visit-card a.link{color:var(--wheat);font-weight:700;text-decoration:none;}
+.hours-line{
+  font-family:'Marcellus',serif;
+  font-size:1.3rem;
+  color:var(--wheat);
+}
+@media(max-width:640px){.visit-grid{grid-template-columns:1fr;}}
+
+/* footer */
+footer{
+  background:#000c05;
+  color:var(--cream-dim);
+  text-align:center;
+  padding:1.6rem 1.25rem;
+  font-size:.82rem;
+}
+footer .script{color:var(--wheat);font-size:1.2rem;display:block;margin-bottom:.3rem;}
+
+/* sticky call button */
+.callfab{
+  position:fixed;bottom:1rem;right:1rem;z-index:50;
+  background:var(--wheat);color:var(--deep);
+  font-weight:700;text-decoration:none;
+  padding:.8rem 1.2rem;border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.4);
+  display:none;
+}
+@media(max-width:760px){.callfab{display:block;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Open 7 days a week · 9am–9pm · <a href="tel:14066541250">(406) 654-1250</a></div>
+
+<header class="hero">
+  <p class="est">Malta, Montana · Since 1987</p>
+  <h1>Marian Hills Golf Course
+    <span class="and">&amp; the Tin Cup Bar &amp; Grill</span>
+  </h1>
+  <p class="sub">Nine holes of prairie links under the big sky, and one of Malta's favorite places to eat — a half mile south of town on US 191.</p>
+  <div class="btn-row">
+    <a class="btn solid" href="tel:14066541250">Call to Tee Off</a>
+    <a class="btn ghost" href="#menu">See the Menu</a>
+  </div>
+</header>
+
+<div class="scorecard">
+  <div class="inner">
+    <div class="cell"><div class="num">9</div><div class="lab">Holes</div></div>
+    <div class="cell"><div class="num">36</div><div class="lab">Par</div></div>
+    <div class="cell"><div class="num">3,470</div><div class="lab">Yards</div></div>
+    <div class="cell"><div class="num">7</div><div class="lab">Bodies of Water</div></div>
+    <div class="cell"><div class="num">90</div><div class="lab">Acres</div></div>
+    <div class="cell"><div class="num">4</div><div class="lab">Tee Sets</div></div>
+  </div>
+</div>
+
+<section id="course">
+  <div class="wrap course-grid">
+    <div>
+      <p class="eyebrow">The Course</p>
+      <h2>A links course in the middle of Montana</h2>
+      <p class="blurb">Designed by John Steidel, Marian Hills rolls across 90 acres of northern prairie with vast fairways, elevation changes, and greens averaging 8,000 square feet. Four sets of tees keep it fun for beginners and honest for low handicappers — and everyone's welcome, it's a public course.</p>
+      <div class="chips">
+        <span class="chip">⛳ 10-acre practice range</span>
+        <span class="chip">🛞 Cart rentals</span>
+        <span class="chip">🏌️ Club rentals</span>
+        <span class="chip">🌊 Milk River Valley views</span>
+      </div>
+    </div>
+    <div class="photo" role="img" aria-label="Green fairways at a prairie golf course"></div>
+  </div>
+</section>
+
+<div class="rates" id="rates">
+  <div class="inner">
+    <div>
+      <h2>Rates</h2>
+      <p class="sub">Cash &amp; all major cards accepted</p>
+    </div>
+    <div class="rate-row">
+      <div class="rate-item"><div class="price">$15</div><div class="lab">9 Holes</div></div>
+      <div class="rate-item"><div class="price">$25</div><div class="lab">18 Holes</div></div>
+      <div class="rate-item"><div class="price">$12/$20</div><div class="lab">Cart 9/18</div></div>
+      <div class="rate-item"><div class="price">$25</div><div class="lab">Club Rental</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="photostrip">
+  <div class="ph1" role="img" aria-label="Golfer mid-swing"></div>
+  <div class="ph2" role="img" aria-label="Classic burger and fries"></div>
+  <div class="ph3" role="img" aria-label="Golf ball on the green"></div>
+</div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="eyebrow">The 19th Hole</p>
+    <h2><span class="script">Tin Cup</span> Bar &amp; Grill</h2>
+    <p class="menu-intro">Half-pound local beef burgers, hand-breaded appetizers, and a dining room overlooking the course and the Milk River Valley. You don't have to golf to eat here. Takeout available (add $1) — call <strong style="color:var(--wheat)">654-1250</strong>. Tap a section to browse:</p>
+
+    <details>
+      <summary>Appetizers</summary>
+      <div class="body">
+        <div class="mi"><span class="n">Jalapeño Poppers <small>6 with ranch</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Pork Egg Rolls <small>4 with sweet &amp; sour</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Chicken Wings or Boneless Wings <small>choice of sauce</small></span><span class="p">$11</span></div>
+        <div class="mi"><span class="n">Mozzarella Sticks <small>8 with marinara</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Breaded Mushrooms <small>15, choice of sauce</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">White Cheddar Garlic Cheese Curds <small>15, choice of sauce</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Nacho Supreme <small>chips, taco meat &amp; the works</small></span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Mexi Tots <small>gems loaded taco-style</small></span><span class="p">$14.50</span></div>
+        <div class="mi"><span class="n">Tortilla Chips &amp; Salsa</span><span class="p">$7</span></div>
+        <div class="mi"><span class="n">Tortilla Chips &amp; Nacho Cheese</span><span class="p">$8</span></div>
+        <div class="mi"><span class="n">Sweet Potato Fries or Onion Rings</span><span class="p">$6.50</span></div>
+        <div class="mi"><span class="n">French Fries, Gems, or Waffle Fries</span><span class="p">$5</span></div>
+        <div class="mi"><span class="n">Tin Cup Combo <small>your choice of any three apps</small></span><span class="p">$27</span></div>
+        <div class="mi"><span class="n">Combo Half Order</span><span class="p">$17</span></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Won Tons</summary>
+      <div class="body">
+        <div class="mi"><span class="n">Mexican Won Tons <small>8 with salsa &amp; sour cream</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Buffalo Chicken Won Tons <small>8 with celery &amp; blue cheese</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Jalapeño Bacon Won Tons <small>8 with ranch</small></span><span class="p">$10</span></div>
+        <div class="mi"><span class="n">Crab Won Tons <small>8 with sweet &amp; sour or sweet chili</small></span><span class="p">$13</span></div>
+        <div class="mi"><span class="n">Won Ton Platter <small>choice of 3 kinds, 4 each</small></span><span class="p">$15</span></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Salads &amp; Wraps</summary>
+      <div class="body">
+        <p class="gnote">Crisp lettuce, tomato, egg, cheddar &amp; a breadstick. Any salad can be a wrap — regular, tomato, or jalapeño.</p>
+        <div class="mi"><span class="n">Taco Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Finger Steak Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Bacon Cheeseburger Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Grilled Chicken &amp; Bacon Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Crispy Chicken Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Sweet &amp; Sour Crispy Chicken Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Grilled Chicken Teriyaki Salad</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Dinner Salad</span><span class="p">$6</span></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Burgers &amp; Baskets</summary>
+      <div class="body">
+        <p class="gnote">Half-pound local beef burgers. Baskets come with french fries, waffle fries, or gems &amp; choice of American, Swiss, cheddar, or pepper jack.</p>
+        <div class="mi"><span class="n">Hamburger Basket</span><span class="p">$13.50</span></div>
+        <div class="mi"><span class="n">Cheeseburger Basket</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Bacon Cheeseburger Basket</span><span class="p">$15</span></div>
+        <div class="mi"><span class="n">Double Bacon Cheeseburger Basket</span><span class="p">$18</span></div>
+        <div class="mi"><span class="n">Mushroom Swiss Burger Basket</span><span class="p">$15</span></div>
+        <div class="mi"><span class="n">Patty Melt Basket <small>grilled onions on rye</small></span><span class="p">$15</span></div>
+        <div class="mi"><span class="n">Chicken Fried Steak <small>country gravy, garden salad &amp; Texas toast</small></span><span class="p">$18</span></div>
+        <div class="mi"><span class="n">Coconut Butterfly Shrimp Basket <small>8 with house-made shrimp sauce</small></span><span class="p">$18</span></div>
+        <div class="mi"><span class="n">Shrimp or Fish &amp; Chips Basket <small>house-made shrimp sauce</small></span><span class="p">$16</span></div>
+        <div class="mi"><span class="n">Finger Steak Basket <small>6 breaded strips, choice of sauce</small></span><span class="p">$14.50</span></div>
+        <div class="mi"><span class="n">Chicken Strip Basket <small>5 breaded strips, choice of sauce</small></span><span class="p">$13.50</span></div>
+        <div class="mi"><span class="n">Chicken Bacon Swiss Basket</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Spicy Chicken Deluxe Basket</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Pork Chop Johns Basket</span><span class="p">$13.50</span></div>
+        <div class="mi"><span class="n">BLT Basket <small>white or wheat toast</small></span><span class="p">$13.50</span></div>
+        <div class="mi"><span class="n">Turkey, Bacon, Ham &amp; Swiss Club Basket</span><span class="p">$14</span></div>
+        <div class="mi"><span class="n">Grilled Cheese Basket</span><span class="p">$13</span></div>
+        <div class="mi"><span class="n">Grilled Chicken Breast, Cottage Cheese &amp; Fruit Bowl</span><span class="p">$13</span></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Kids Basket</summary>
+      <div class="body">
+        <div class="mi"><span class="n">Small Hamburger, Grilled Cheese, or 2 Chicken Strips <small>with fries, waffle fries, or gems</small></span><span class="p">$10</span></div>
+      </div>
+    </details>
+
+    <p class="menu-foot"><strong>Takeout welcome</strong> — call (406) 654-1250, add $1. Sauces: ranch, chipotle ranch, honey mustard, honey bourbon BBQ, garlic parmesan, sweet chili, sweet &amp; sour, Frank's Hot &amp; Old Bay Hot.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Come See Us</p>
+    <h2>Hours &amp; Location</h2>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <h3>Hours</h3>
+        <p class="hours-line">Every day · 9am – 9pm</p>
+        <p>Course, clubhouse &amp; the Tin Cup — open 7 days a week.</p>
+        <p><a class="link" href="tel:14066541250">Call (406) 654-1250</a></p>
+      </div>
+      <div class="visit-card">
+        <h3>Find Us</h3>
+        <p>1652 US Highway 191 S, Malta, MT 59538<br>Half a mile south of Malta on US 191.</p>
+        <p><a class="link" href="https://maps.google.com/?q=1652+US+Highway+191+S,+Malta,+MT+59538" target="_blank" rel="noopener">Get directions →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="script">See you on the course</span>
+  Marian Hills Golf Course &amp; Tin Cup Bar and Grill · 1652 US Hwy 191 S, Malta, MT 59538 · (406) 654-1250
+</footer>
+
+<a class="callfab" href="tel:14066541250">📞 Call Us</a>
+
+</body>
+</html>
